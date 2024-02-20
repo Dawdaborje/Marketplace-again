@@ -1,4 +1,6 @@
 E-commerce Website Development Requirements:
+I'll tell you what the project consists of right now: I'll give you an example, it's like the little stalls of farmers and ranchers in the US selling their products the same thing but online, this being a market instead of physical, so digital.
+
 
 Backend (Python and Django):
 
@@ -89,74 +91,3 @@ Order Management:
 	Develop models to store order information.
 	Implement logic to allow salespeople to manage orders (e.g., confirm, prepare, prepare, ship, etc.).
 	Create a system to update and display order status to consumers.
-
-
-Frontend ( Next.js):
-
-User Registration:
-
-·	Create registration pages and forms.
-·	Design and develop registration forms with relevant fields for each user type.
-·	Implement client-side validation for registration forms.
-·	Handle email or phone number verification.
-·	Develop logic to handle email verification links or SMS verification codes.
-·	Develop specific profile pages for each user type.
-·	Design and develop profile pages with relevant information for each user type.
-·	Implement logic for updating user profile information.
-
-User Profiles:
-
-·	Create pages and forms for users to complete or edit their profiles.
-·	Design and develop profile forms with relevant fields for each user type.
-·	Implement client-side validation for profile forms.
-·	Develop logic to handle updating user profile information.
-
-Product Listings:
-
-·	Create pages to display products, categories, and search options.
-·	Design and develop product listing pages with filtering and search options.
-·	Implement logic to retrieve product data from the API and display it on the page.
-
-Search Engine and Filters:
-
-·	Create interfaces for search and filters.
-·	Design and develop a search bar and filter components in the user interface.
-·	Implement logic to handle search queries and apply filters to search results.
-
-Shopping Cart:
-
-·	Create pages and components to manage the shopping cart.
-·	Design and develop a shopping cart page that displays all products added to the cart.
-·	Implement components to increase, decrease, or delete the quantity of a product in the cart.
-·	Develop logic to update the shopping cart page when changes are made to the cart.
-
-Payment System:
-
-·	Develop the payment flow and notifications.
-·	Design and develop a payment flow to guide users through the checkout process.
-·	Implement logic to display real-time notifications about payment status.
-
-Ratings & Reviews:
-
-·	Develop interfaces for rating products and vendors.
-·	Design and develop forms for users to submit ratings and reviews.
-·	Implement the logic to display ratings and reviews of products and vendors on their respective pages.
-
-Messaging:
-
-·	Implement notifications for new messages.
-·	Design and develop a user interface to display notifications of new messages.
-·	Implement logic to update notifications in real-time when new messages are received.
-
-Notification System:
-
-·	Create a section in profiles to view and manage notifications.
-·	Design and develop a notifications section in the profile page of each user.
-·	Implement logic to display notifications in real-time and allow users to manage (e.g., mark as read, delete, etc.) their notifications.
-
-Order Management:
-
-·	Create pages to manage orders from the seller and consumer side.
-·	Design and develop an order management page for sellers, where they can view and manage their orders.
-·	Implement an order tracking page for consumers, where they can see the status of their orders.
-
