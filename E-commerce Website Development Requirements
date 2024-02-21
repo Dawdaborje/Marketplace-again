@@ -4,7 +4,34 @@ I'll tell you what the project consists of right now: I'll give you an example, 
 
 Backend (Python and Django):
 
+<!-- Window Users -->
+Clone and cd into repository
+Create a venv folder using: python -m venv venv
+Activate venv on window terminal using: venv\scripts\activate
+Run this command to install dependencies: pip install -r requirements.txt
+
+
+<!-- Mac/Linux Users. If not clear please search the web for how to create virtual environment for a python environment using mac/linux  -->
+Clone and cd into repository
+Install virtualenv using: pip install virtualenv
+Create venv using: virtualenv venv
+Activate venv using: source venv/bin/activate
+Run this command to install dependencies: pip install -r requirements.txt
 	
+
+The Project root is the core folder where you will find the settings.py file and other relevant files for this project.
+
+The authUsers is a separate app to manage Users (i.e Create, Edit, Delete etc...)
+
+The chatapp is a separate app where websocket will be used for routing rather than http or https. It will be a simple chat app for this project.
+
+The notifications app is a separate app for managing notifications.
+
+The products app is a separate app for managing products (i.e Create, Edit, delete etc...)
+
+Note: If there are apps you would like to create, for example the payment system app, please go ahead if you know what you are doing. Thanks.
+
+<!-- Model Structures -->
 User Registration:
 
 	Create user models for farmers, ranchers, and consumers.
