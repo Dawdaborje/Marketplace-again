@@ -1,120 +1,155 @@
-E-commerce Website Development Requirements:
-I'll tell you what the project consists of right now: I'll give you an example, it's like the little stalls of farmers and ranchers in the US selling their products the same thing but online, this being a market instead of physical, so digital.
+Business Requirements and Logic
+1. User Registration:
+- Requirements:
+- Three types of users: farmers, ranchers and consumer.
+- Authentication by email or phone number and password.
+- Verification of email or phone number.
+- Logic:
+- Users can register by selecting their type.
+- Once registered, they receive a verification email or SMS.
+- After verification, they can access their profile and specific functions according to their type.
+2. User Profiles:
+- Requirements:
+- Basic information: name, location, contact.
+- For farmers and ranchers: details of their products, history, certifications.
+- For consumers: purchase history, preferences, wish list.
+- Logic:
+- Users complete or edit their profile after registration.
+- Farmers and ranchers can add or edit details about their products.
+- Consumers can review and adjust their preferences.
+3. Product Listings:
+- Requirements:
+- Display of products with photos, descriptions and prices.
+- Categorization according to product type (e.g., vegetables, meat, dairy).
+- Logic:
+- Farmers and ranchers post their products.
+- Consumers can browse categories or search for specific products.
+4. Search Engine and Filters:	
+- Requirements:
+- Search by product name, type, price, among others.
+- Filters such as vendor location, price range, category.
+- Logic:
+- Consumers enter search terms or select filters.
+- The system displays products that match the search criteria.
+5. Shopping Cart:
+- Requirements:
+- Add multiple products to cart.
+- Display cart summary with total to be paid.
+- Logic:
+- Consumers add products to cart.
+- They can review their cart before proceeding to checkout.
+6. Payment System:
+- Requirements:
+- Integration with payment gateways such as PayPal, credit/debit cards, among others.
+- Invoice or receipt generation.
+- Logic:
+- Upon confirmation of purchase, consumers are redirected to the payment gateway.
+- Once the payment is confirmed, they receive a notification and a receipt or invoice.
+... (and so on for each point).
+General Business Strategy:
+The main objective is to connect farmers and ranchers with consumers looking for fresh, quality produce. By providing a platform that facilitates this connection, it is expected to increase sales for farmers and ranchers, offer more competitive prices to consumers, and promote local consumption.
+For the marketplace to be sustainable, it could consider charging commissions for each sale made through the platform or having a subscription model for sellers. It is also vital to ensure trust in the platform through robust review and rating systems, as well as clear return and refund policies.
+Over time, as the marketplace grows, consideration can be given to expanding into new categories, introducing advanced tools (such as AI for recommendations) and strengthening the community through education and sustainability programs.
 
 
-Backend (Python and Django):
 
-<!-- Window Users -->
-Clone and cd into repository
-Create a venv folder using: python -m venv venv
-Activate venv on window terminal using: venv\scripts\activate
-Run this command to install dependencies: pip install -r requirements.txt
+7. Ratings and Reviews:
+- Requirements:
+- Consumers should be able to rate and leave reviews on products and vendors.
+- A moderation system should be in place for inappropriate reviews.
+- Logic:
+- After a purchase, the consumer is invited to rate and review the product and seller.
+- Ratings and reviews are visible to other users, helping in their purchasing decisions.
+- Inappropriate reviews can be reported for review and possible removal.
+8. Messaging:
+- Requirements:
+- Allow direct communication between consumers and sellers.
+- Notification system for new messages.
+- Logic:
+- A consumer can send a direct message to a seller to ask questions or clarify details about a product.
+- Both the consumer and the seller receive notifications of new messages.
+9. Notification System:
+- Requirements:
+- Notify users of relevant activities: new messages, order status changes, promotions, etc.
+- Logic:
+- Notification is generated based on specific events on the platform.
+- Users can view and manage their notifications from their profile.
+10. Order Management:
+- Requirements:
+- Sellers must be able to view and manage orders: accept, reject, update status (e.g., in preparation, shipped, delivered).
+- Consumers must be able to view the status of their orders.
+- Logic:
+- Once an order is placed, the seller receives a notification.
+- The seller can manage the order, and each status change is notified to the consumer.
 
-
-<!-- Mac/Linux Users. If not clear please search the web for how to create virtual environment for a python environment using mac/linux  -->
-Clone and cd into repository
-Install virtualenv using: pip install virtualenv
-Create venv using: virtualenv venv
-Activate venv using: source venv/bin/activate
-Run this command to install dependencies: pip install -r requirements.txt
+11. Recommendation System:
+- Requirements:
+- Based on purchase history and consumer preferences, display recommended products.
+- Logic:
+- As consumers browse and shop, the system collects data.
+- An algorithm (possibly based on artificial intelligence) is used to analyze patterns and preferences and generate recommendations.
+12. Security and Privacy:
+- Requirements:
+- Protection of personal and payment data.
+- Use of secure connections (e.g. HTTPS) and measures against attacks and security breaches.
+- Logic:
+- Standard security protocols are implemented to protect user information.
+- Regular audits and tests are performed to ensure system integrity.
+-	
+- 13.Administration panel
+- Requirements:
+- An interface for administrators to manage users, products and orders.
+- Analytics tools to monitor marketplace performance.
+- Logic:
+- Administrators access the dashboard to monitor and manage activity on the platform.
+- From here, they can make decisions based on the data collected, such as promotions, featured features or corrective actions.
+- 14.Customer Support
+- Requirements:
+- Direct communication channels between users and marketplace support, such as live chat, email or phone.
+- Knowledge base or FAQ section.
+- Logic:
+- Users can search for quick solutions in the knowledge base or contact support directly.
+- Support prioritizes and answers queries, ensuring user satisfaction.
+-	
+- 15.Return and Refund Policy.
+- Requirements:
+- Clear policies on when and how products can be returned.
+- Transparent process for requesting and receiving refunds.
+- Rationale:
+- In case of problems with a product, consumers can consult the policy and, if they meet the criteria, request a return or refund.
+- The seller is notified and, depending on the situation, the refund is processed or the return is coordinated.
+- 16.Commission Management
+- Requirements:
+- Automatic system to calculate commissions based on sales made through the platform.
+- Detailed reports for salespeople on commissions and sales.
+- Logic:
+- When a sale is made, the platform automatically retains the agreed commission and transfers the remainder to the seller.
+- Sellers can access reports to understand their earnings and commissions paid.
+- 17.Scalability
+- Requirements:
+- Infrastructure that supports an increase in the number of users and transactions.
+- Ability to add new functionality over time.
+- Logic:
+- A scalable architecture is used that allows for growth on demand, such as cloud servers with automatic scaling.
+- Marketplace evolution is planned based on user feedback and market trends.
+- 18.Social Networking and Sharing.
+- Requirements:
+- Integration with major social networks to share products or promotions.
+- Social marketing tools to increase visibility.
+- Logic:
+- Users can share their favorite products or purchases on their social networks.
+- Social media marketing campaigns are conducted to attract new users and sellers.
 	
-
-The Project root is the core folder where you will find the settings.py file and other relevant files for this project.
-
-The authUsers is a separate app to manage Users (i.e Create, Edit, Delete etc...)
-
-The chatapp is a separate app where websocket will be used for routing rather than http or https. It will be a simple chat app for this project.
-
-The notifications app is a separate app for managing notifications.
-
-The products app is a separate app for managing products (i.e Create, Edit, delete etc...)
-
-Note: If there are apps you would like to create, for example the payment system app, please go ahead if you know what you are doing. Thanks.
-
-<!-- Model Structures -->
-User Registration:
-
-	Create user models for farmers, ranchers, and consumers.
-	Define the necessary attributes for each type of user in the data model.
-	Implement CRUD (Create, Read, Update, Delete) functions for each user model.
-	Implement authentication by email or phone number and password.
-	Use a secure authentication library to store passwords securely.
-	Implement logic to verify the authenticity of emails or phone numbers.
-	Develop logic for user type selection and send verification emails or SMS.
-	Create a user interface to select the user type during registration.
-	Implement logic to send verification emails or SMS after registration.
-
-	
-User Profiles:
-
-	Create models and views to store basic information and specific details for farmers, ranchers, and consumers.
-	Define the necessary attributes for each type of profile in the data model.
-	Implement CRUD (Create, Read, Update, Delete) functions for each profile model.
-	Create views to expose the profile data through an API.
-
-	
-Product Listings:
-
-	Implement models and views for products.
-	Define the necessary attributes for each product in the data model.
-	Implement CRUD functions (Create, Read, Update, Delete) for the product model.
-	Create views to expose product data through an API.
-	Develop the logic for farmers and ranchers to publish products.
-	Implement logic to allow farmers and ranchers to publish new products.
-	Ensure that only authenticated users can publish products.
-
-	
-Search Engine and Filters:
-
-	Implement a search engine that supports filters.
-	Develop logic to search for products based on different criteria (e.g., product name, category, price, etc.).
-	Implement logic to filter search results based on different criteria (e.g., price range, location, etc.).
-
-	
-Shopping Cart:
-
-	Implement logic to add products to the cart.
-	Develop logic to allow users to add products to the cart.
-	Implement logic to update the quantity of a product in the cart.
-	Create logic to remove products from the cart.
-
-	
-Payment System:
-
-	Integrate payment gateways (PayPal, cards, etc.).
-	Implement the logic to process payments through different payment methods such as PayPal and credit/debit cards.
-	Ensure that all transactions are secure and comply with relevant regulations.
-	Generate invoices and manage sales commissions.
-	Develop the logic to generate invoices automatically after each purchase.
-	Implement logic to calculate and manage sales commissions.
-
-	
-Ratings & Reviews:
-
-	Implement a ratings and reviews system with moderation.
-	Develop models to store ratings and reviews of products and sellers.
-	Implement logic to allow users to post ratings and reviews.
-	Create a moderation system to review and approve reviews before they are posted.
-
-	
-Messaging:
-
-	Create a messaging system between consumers and vendors.
-	Develop models to store messages between consumers and vendors.
-	Implement logic to allow users to send and receive messages.
-	Create a system to keep track of messages sent and received.
-
-	
-Notification System:
-
-	Develop an event-based notification system.
-	Implement logic to generate notifications based on specific events (e.g., new messages, order status updates, etc.).
-	Create a system to store and manage notifications for each user.
-
-	
-Order Management:
-
-	Implement logic for sellers to manage orders and consumers to see the status.
-	Develop models to store order information.
-	Implement logic to allow salespeople to manage orders (e.g., confirm, prepare, prepare, ship, etc.).
-	Create a system to update and display order status to consumers.
+- Advanced Functionality
+- Requirements:
+- Artificial Intelligence (AI) tools or data analytics to improve user experience and provide business insights.
+- Logic:
+- AI is integrated to personalize the user experience, optimize the buying process and improve the recommendation system.
+- Data analytics help identify trends, shopping behaviors and opportunities for platform improvement.
+-	
+- 20.Affiliate Program.
+- Requirements:
+- A system that rewards users for referring new customers or vendors to the marketplace.
+- Logic:
+- Users can share a unique affiliate link.
+- If someone signs up or buys through that link, the user receives a reward (discount, credit on the platform, etc.).
